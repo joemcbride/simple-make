@@ -21,7 +21,7 @@ make({ tasks });
 ```javascript
 import Deferred from 'simple-make/lib/Deferred';
 
-export default function testTask() {
+export default function aTask() {
   const deferred = new Deferred();
 
   // deferred.reject('some error');

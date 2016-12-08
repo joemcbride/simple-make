@@ -9,9 +9,17 @@
     "lint": "eslint ./",
     "postinstall": "npm run compile"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joemcbride/simple-make.git"
+  },
+  "keywords": ["make", "compile", "tasks"],
+  "author": "Joe McBride",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joemcbride/simple-make/issues"
+  },
+  "homepage": "https://github.com/joemcbride/simple-make#readme",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
