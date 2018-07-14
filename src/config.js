@@ -1,4 +1,5 @@
 export default {
   name: '[project]',
-  format: null
+  format: null,
+  taskTimeout: 5000
 }
