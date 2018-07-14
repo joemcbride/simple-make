@@ -7,26 +7,25 @@ import make from 'simple-make/lib/make';
 import config from 'simple-make/lib/config';
 import aTask from './aTask';
 
-config.name = '[my project]';
-config.format = seconds => `Done in ${seconds}s.`;
+config.name = '[my project]'
+config.format = seconds => `Done in ${seconds}s.`
+
+const settings = {
+  one: 'value'
+}
 
 const tasks = {
-  test: aTask,
+  test: testTask,
   'default': 'test'
-};
+}
 
-make({ tasks });
+make({ tasks, settings })
 ```
 
 ```javascript
-import Deferred from 'simple-make/lib/Deferred';
-
-export default function aTask() {
-  const deferred = new Deferred();
-
-  // deferred.reject('some error');
-  deferred.resolve();
-
-  return deferred.promise;
+export default function aTask(settings) {
+  return new Promise((resolve, reject) => {
+    resolve('done')
+  })
 }
 ```

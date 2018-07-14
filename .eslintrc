@@ -1,6 +1,6 @@
 {
   "env": {
-    "browser": true,
+    "browser": false,
     "es6": true,
     "node": true
   },
@@ -19,11 +19,13 @@
     "object-shorthand": 2,
     "one-var": [2, { "initialized": "never" }],
     "key-spacing": ["error", { "beforeColon": false }],
+    "object-curly-spacing": ["error", "always", {}],
     "no-this-before-super": 2,
     "no-underscore-dangle": 0,
     "no-unused-vars": [2, { "vars": "all", "args": "none" }],
     "no-var": 2,
     "quotes": [2, "single", "avoid-escape"],
+    "semi": ["error", "never"],
     "strict": 0
   }
 }

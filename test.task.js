@@ -1,12 +1,15 @@
-import Deferred from './src/Deferred';
+import Deferred from './src/Deferred'
 
-export default function testTask() {
-  const deferred = new Deferred();
+export default function testTask(settings) {
 
-  console.log('test!'); // eslint-disable-line
+  console.log('settings', settings) // eslint-disable-line
 
-  // deferred.reject('some error');
-  deferred.resolve();
+  const deferred = new Deferred()
 
-  return deferred.promise;
+  console.log('test!') // eslint-disable-line
+
+  // deferred.reject('some error')
+  deferred.resolve()
+
+  return deferred.promise
 }

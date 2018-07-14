@@ -1,26 +1,25 @@
 function tasksFromObject(obj, target) {
-  // console.log('target', target);
   if(typeof target === 'function') {
-    return target;
+    return target
   }
 
-  let res = obj[target];
+  let res = obj[target]
 
   if(typeof res === 'function') {
-    return res;
+    return res
   }
 
-  let actions = res;
+  let actions = res
 
   if(typeof res === 'string') {
-    actions = res.split(' ');
+    actions = res.split(' ')
   }
 
   return actions.reduce((cur, next) => {
-    return cur.concat(tasksFromObject(obj, next));
-  }, []);
+    return cur.concat(tasksFromObject(obj, next))
+  }, [])
 }
 
 export default function toTasks(obj, target) {
-  return [].concat(tasksFromObject(obj, target));
+  return [].concat(tasksFromObject(obj, target))
 }
