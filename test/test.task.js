@@ -1,4 +1,4 @@
-import Deferred from './src/Deferred'
+import Deferred from '../src/Deferred'
 
 export default function testTask(settings) {
 

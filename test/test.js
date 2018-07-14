@@ -1,5 +1,5 @@
-import make from './src/make'
-import config from './src/config'
+import make from '../src/make'
+import config from '../src/config'
 import testTask from './test.task'
 import asyncTask from './test.asyncTask'
 

@@ -9,7 +9,7 @@ export default function promiseTimeout(ms, promise) {
         reject('Timed out in '+ ms + 'ms.')
       }, ms)
     })
-  
+
     // Returns a race between our timeout and the passed in promise
     return Promise.race([
       promise,
