@@ -1,7 +1,6 @@
 import moment from 'moment'
 import { log, logError } from './logUtils'
 import config from './config'
-import promiseTimeout from './promiseTimeout'
 
 function printResult(start) {
   const end = moment()
@@ -16,7 +15,7 @@ function printResult(start) {
 const promiseSerial = ({ tasks, settings }) =>{
   const start = moment()
   return tasks.reduce((promise, func) =>
-    promise.then(result => promiseTimeout(config.taskTimeout, func(settings)).then(Array.prototype.concat.bind(result))),
+    promise.then(result => func(settings).then(Array.prototype.concat.bind(result))),
     Promise.resolve([]))
     .then(res => {
       printResult(start)

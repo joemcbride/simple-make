@@ -9,7 +9,7 @@ export default function testTask(settings) {
   console.log('test!') // eslint-disable-line
 
   // deferred.reject('some error')
-  deferred.resolve()
+  deferred.resolve('test.task')
 
   return deferred.promise
 }

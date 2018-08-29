@@ -1,8 +1,8 @@
 
 function errors(resolve, reject) {
-    // throw new Error('some error')
-    resolve('abcd')
-    // reject('something')
+    // throw new Error('test.asyncTask error')
+    resolve('test.asyncTask')
+    // reject('test.asyncTask reject')
 }
 
 export default function asyncTask(settings) {
